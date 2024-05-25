@@ -52,7 +52,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec kitty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+r exec --no-startup-id dmenu_run
@@ -121,7 +121,7 @@ set $ws2 "2: Edge"
 set $ws3 "3: Coding"
 set $ws4 "4: Discord"
 set $ws5 "5: Spotify"
-set $ws6 "6"
+set $ws6 "6: Ranger"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -133,7 +133,7 @@ bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace number $ws5
+bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
@@ -213,10 +213,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 3%+
 exec_always setxkbmap -layout us,ara
 exec_always setxkbmap -option 'grp:win_space_toggle'
 
+exec --no-startup-id dunst
 exec_always feh --bg-scale /home/robaa/Pictures/wallpaper.png
 exec_always discord
 exec_always ~/.config/polybar/launch.sh
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
-
 
 
